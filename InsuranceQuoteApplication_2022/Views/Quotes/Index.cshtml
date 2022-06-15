@@ -1,0 +1,147 @@
+﻿@model IEnumerable<InsuranceQuoteApplication_2022.Models.Quote>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QuoteGenerationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgeUnder18Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgeBetween18And25Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgeOver25Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AutoYearBefore2000Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AutoYearBetween2000And2015Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AutoYearAfter2015Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MakeIsPorscheRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelIsCarreraRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeedingTicketRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubtotalAfterSpeedingTicketRateCalculation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUIIncreaseOf25PercentRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubtotalAfterDUIRateCalculation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullCoverageInsuranceRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuoteRateTotalAfterCalculation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiscountRateForPaymentInFull)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalQuoteYearly_1PaymentDiscountApplied)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalQuoteMonthly_12PaymentsNoDiscount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Insuree.FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuoteGenerationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgeUnder18Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgeBetween18And25Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgeOver25Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutoYearBefore2000Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutoYearBetween2000And2015Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutoYearAfter2015Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MakeIsPorscheRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelIsCarreraRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpeedingTicketRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubtotalAfterSpeedingTicketRateCalculation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUIIncreaseOf25PercentRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubtotalAfterDUIRateCalculation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullCoverageInsuranceRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuoteRateTotalAfterCalculation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiscountRateForPaymentInFull)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalQuoteYearly_1PaymentDiscountApplied)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalQuoteMonthly_12PaymentsNoDiscount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insuree.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.QuoteNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QuoteNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QuoteNumber })
+        </td>
+    </tr>
+}
+
+</table>
